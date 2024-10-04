@@ -3,6 +3,7 @@
 ## 1. Generate the project
 
 If needed, check the Rails command line [documentation](https://guides.rubyonrails.org/command_line.html). 
+
 ```sh 
 rails new my_app --database=postgresql --skip-test --skip-jbuider --css tailwind 
 ```
@@ -25,10 +26,11 @@ end
 Next, in your project directory:
 
 ```sh 
-$ bundle install
-$ rails generate rspec:install
-$ bundle binstubs rspec-core
+bundle install
+rails generate rspec:install
+bundle binstubs rspec-core
 ```
+
 ## 3. (Optional) Setting up Devise
 
 Ensure these instructions are up to date, reference the [documentation](https://github.com/heartcombo/devise).
@@ -40,12 +42,80 @@ Add these to the `Gemfile`:
 gem 'devise'
 ```
 
+Add these to `app/controllers/application_controller.rb` to protect all routes by default and allow some extra params:
+
+```ruby
+before_action :configure_permitted_parameters, if: :devise_controller?
+before_action :authenticate_user!
+
+protected
+
+def configure_permitted_parameters
+  devise_parameter_sanitizer.permit(:sign_up, keys: %i[first_name last_name terms_and_conditions])
+  devise_parameter_sanitizer.permit(:account_update, keys: %i[first_name last_name])
+end
+```
+
+Next, we'll install Devise and generate a `User` model:
+
+```sh 
+rails generate devise:install
+rails generate devise User
+```
+
+We'll go to the generated `User` migration and add two additional fields for `first_name` and `last_name`. At this point we can decide what Devise modules you want to enable.
+
+```ruby
+t.string :first_name,       null: false, default: ""
+t.string :last_name,        null: false, default: ""
+```
+
 ## 4. (Optional) Setting up Letter Opener
 
-A simple gem to check sent e-mail from your application.
+A simple gem to check sent e-mail from your application. [Documentation](https://github.com/fgrehm/letter_opener_web), why not?
+
+Add this to `Gemfile`:
+
+```ruby
+group :development do
+  # Use letter_opener_web to preview email in the default browser instead of sending it
+  gem 'letter_opener_web'
+end
+```
+
+Add this to your `routes.rb`:
+
+```ruby
+Your::Application.routes.draw do
+  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
+end
+```
+
+Then set the delivery method in `config/environments/development.rb`
+
+```ruby
+config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+config.action_mailer.delivery_method = :letter_opener
+
+config.action_mailer.perform_deliveries = true
+```
 
 ## 5. (Optional) Setting up Pundit
 
+Pundit provides us a set of helpers which guide you in leveraging User/Admin policies. As always, [Docs](https://github.com/varvet/pundit).
+
+Add to `Gemfile`:
+
+```ruby
+gem 'pundit'
+```
+
+Run generator:
+
+```sh 
+rails g pundit:install
+```
 
 ## 6. Tweaking RSpec
 
