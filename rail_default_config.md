@@ -1,5 +1,9 @@
 # Starting a new Rails application
 
+This is my guide on how to start a Rails application the way I like and usually use.
+
+Remember to add and commit every step!
+
 ## 1. Generate the project
 
 If needed, check the Rails command line [documentation](https://guides.rubyonrails.org/command_line.html). 
@@ -7,20 +11,17 @@ If needed, check the Rails command line [documentation](https://guides.rubyonrai
 ```sh 
 rails new my_app --database=postgresql --skip-test --skip-jbuider --css tailwind 
 ```
-
 ## 2. Setting up RSpec
 
 Instead of using default Rails Minitest, we're going with the best of the best!
 
 [Documentation](https://github.com/rspec/rspec-rails/) you know, just in case.
 
-Add the following into Gemfile:
+Add the following into `Gemfile`'s group `:development, :test`:
 
 ```ruby 
-group :development, :test do
-  # Integrates the Rails testing helpers into RSpec
-  gem 'rspec-rails', '~> 7.0.0'
-end
+# Integrates the Rails testing helpers into RSpec [https://github.com/rspec/rspec-rails]
+gem 'rspec-rails'
 ```
 
 Next, in your project directory:
@@ -35,11 +36,16 @@ bundle binstubs rspec-core
 
 Ensure these instructions are up to date, reference the [documentation](https://github.com/heartcombo/devise).
 
-Add these to the `Gemfile`:
+Add these to the `Gemfile`: 
 
 ```ruby
-# Flexible authentication solution for Rails
+# Flexible authentication solution for Rails [https://github.com/heartcombo/devise]
 gem 'devise'
+```
+
+Run the thingy to install it:
+```sh 
+bundle install
 ```
 
 Add these to `app/controllers/application_controller.rb` to protect all routes by default and allow some extra params:
@@ -60,6 +66,11 @@ Next, we'll install Devise and generate a `User` model:
 
 ```sh 
 rails generate devise:install
+```
+
+Devise will mix some letters into some steps you should do, just follow it.
+
+```sh 
 rails generate devise User
 ```
 
@@ -74,28 +85,22 @@ t.string :last_name,        null: false, default: ""
 
 A simple gem to check sent e-mail from your application. [Documentation](https://github.com/fgrehm/letter_opener_web), why not?
 
-Add this to `Gemfile`:
+Add this to `Gemfile`'s group `:development`:
 
 ```ruby
-group :development do
-  # Use letter_opener_web to preview email in the default browser instead of sending it
+  # Use letter_opener_web to preview email in the default browser instead of sending it [https://github.com/fgrehm/letter_opener_web]
   gem 'letter_opener_web'
-end
 ```
 
 Add this to your `routes.rb`:
 
-```ruby
-Your::Application.routes.draw do
-  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
-end
+```ruby 
+mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 ```
 
 Then set the delivery method in `config/environments/development.rb`
 
 ```ruby
-config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-
 config.action_mailer.delivery_method = :letter_opener
 
 config.action_mailer.perform_deliveries = true
@@ -108,6 +113,7 @@ Pundit provides us a set of helpers which guide you in leveraging User/Admin pol
 Add to `Gemfile`:
 
 ```ruby
+# Object oriented authorization for Rails applications [https://github.com/varvet/pundit]
 gem 'pundit'
 ```
 
@@ -183,7 +189,7 @@ RSpec.configure do |config|
 end
 ```
 
-## 7. Tweaking Rails configs
+## 8. Tweaking Rails configs
 
 Now let's remove some bloat that Rails generators create for us, and add Gzip.
 
