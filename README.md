@@ -6,7 +6,20 @@ I love writing documents because I have a clownfish memory, so why not share? It
 
 Also, feel free to give me some tips or correct some information that I might be wrong. I'm always eager to learn something new.
 
-## Table of content
+
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#ruby-on-rails">Ruby on Rails</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+  </ol>
+</details>
+
+## Resources
 
 ### Ruby on Rails
 
