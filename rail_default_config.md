@@ -1,4 +1,4 @@
-# Starting a new Rails application
+# Starting a new Rails 7 application
 
 This is my guide on how to start a Rails application the way I like and usually use.
 
@@ -11,9 +11,12 @@ If needed, check the Rails command line [documentation](https://guides.rubyonrai
 ```sh 
 rails new my_app --database=postgresql --skip-test --skip-jbuider --css tailwind 
 ```
+
+> COMMIT
+
 ## 2. Setting up RSpec
 
-Instead of using default Rails Minitest, we're going with the best of the best!
+Instead of using default Rails Minitest, we're going with the best of the best (or because it's the one I learned in...)!
 
 [Documentation](https://github.com/rspec/rspec-rails/) you know, just in case.
 
@@ -32,7 +35,75 @@ rails generate rspec:install
 bundle binstubs rspec-core
 ```
 
-## 3. (Optional) Setting up Devise
+### 2.1. Tweaking RSpec
+
+Now we just change some configurations in `spec/rails_helper.rb`
+
+Uncomment the line bellow. This tells Rspec to look into specs support directory and load all those files, so it let us create helpers and things like that
+
+```ruby
+Rails.root.glob('spec/support/**/*.rb').sort_by(&:to_s).each { |f| require f }
+```
+
+The add these to the configuration block:
+
+```ruby
+config.global_fixtuers = :all
+
+# Comment this line if you won't use ActiveJob
+config.include ActiveJob::TestHelper
+
+# Comment this line if you won't use ActionMailbox
+config.include ActionMailbox::TestHelper
+
+# Comment the lines bellow if you won't use Devise
+config.include Devise::Test::IntegrationHelpers, type: :feature
+config.include Devise::Test::ControllerHelpers, type: :controller
+```
+
+(Optional) This next step we'll create a helper that will put Devise into test mode, when using request_spec, giving us
+a method to sign users in and out.
+
+Create this file in `spec/support/request_spec_helper.rb`:
+
+```ruby
+module RequestSpecHelper
+  include Warden::Test::Helpers
+
+  def self.included(base)
+    base.before(:each) { Warden.test_mode! }
+    base.after(:each) { Warden.test_reset! }
+  end
+
+  def sign_in(resource)
+    login_as(resource, scope: warden_scope(resource))
+    resource
+  end
+
+  def sign_out(resource)
+    logout(warden_scope(resource))
+  end
+
+  def json
+    JSON.parse(response.body).with_indifferent_access
+  end
+
+  private
+
+  def warden_scope(resource)
+    resource.class.name.underscore.to_sym
+  end
+end
+
+RSpec.configure do |config|
+  config.include RequestSpecHelper, type: :request
+  config.before(:each, type: :request) { host! "my_app.test" }
+end
+```
+
+> COMMIT
+
+## 3. Setting up Devise (Optional)
 
 Ensure these instructions are up to date, reference the [documentation](https://github.com/heartcombo/devise).
 
@@ -81,7 +152,36 @@ t.string :first_name,       null: false, default: ""
 t.string :last_name,        null: false, default: ""
 ```
 
-## 4. (Optional) Setting up Letter Opener
+### 3.1 Tweaking some Devise configs
+
+Here are some configurations that I like to change. They are all at `config/initializers/devise.rb`:
+
+```ruby
+# If you already have the domain, just it it already man...
+config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+
+# Uncomment the line bellow. No one deserves to keep loging again and again
+# config.remember_for = 2.weeks
+
+# Uncomment these lines to avoid people trying to brute force an account
+# config.lock_strategy = :failed_attempts
+
+# config.unlock_keys = [:email]
+
+# config.unlock_strategy = :both
+
+# config.maximum_attempts = 20
+
+# config.unlock_in = 1.hour
+
+# config.last_attempt_warning = true
+```
+
+If you want some locales for devise, here are some [devise locales](https://github.com/heartcombo/devise/wiki/I18n). Just create a `config/devise.your_language.yml` it.
+
+> COMMIT
+
+## 4. Setting up Letter Opener (Optional)
 
 A simple gem to check sent e-mail from your application. [Documentation](https://github.com/fgrehm/letter_opener_web), why not?
 
@@ -105,8 +205,9 @@ config.action_mailer.delivery_method = :letter_opener
 
 config.action_mailer.perform_deliveries = true
 ```
+> Guess what?
 
-## 5. (Optional) Setting up Pundit
+## 5. Setting up Pundit (Optional)
 
 Pundit provides us a set of helpers which guide you in leveraging User/Admin policies. As always, [Docs](https://github.com/varvet/pundit).
 
@@ -123,73 +224,9 @@ Run generator:
 rails g pundit:install
 ```
 
-## 6. Tweaking RSpec
+> Come on. You know what you should be doing here.
 
-Now we just change some configurations in `spec/rails_helper.rb`
-
-Uncomment the line bellow. This tells Rspec to look into specs support directory and load all those files, so it let us create helpers and things like that
-
-```ruby
-Rails.root.glob('spec/support/**/*.rb').sort_by(&:to_s).each { |f| require f }
-```
-
-The add these to the configuration block:
-
-```ruby
-config.global_fixtuers = :all
-
-# Uncomment this line if you'll use ActiveJob
-# config.include ActiveJob::TestHelper
-
-# Uncomment this line if you'll use ActionMailbox
-# config.include ActionMailbox::TestHelper
-
-# Uncomment the lines bellow AFTER you install Devise, if you need it
-# config.include Devise::Test::IntegrationHelpers, type: :feature
-# config.include Devise::Test::ControllerHelpers, type: :controller
-```
-
-(Optional) This next step we'll create a helper that will put Devise into test mode, when using request_spec, giving us
-a method to sign users in and out.
-
-Create this file in `spec/support/request_spec_helper.rb`:
-
-```ruby
-module RequestSpecHelper
-  include Warden::Test::Helpers
-
-  def self.included(base)
-    base.before(:each) { Warden.test_mode! }
-    base.after(:each) { Warden.test_reset! }
-  end
-
-  def sign_in(resource)
-    login_as(resource, scope: warden_scope(resource))
-    resource
-  end
-
-  def sign_out(resource)
-    logout(warden_scope(resource))
-  end
-
-  def json
-    JSON.parse(response.body).with_indifferent_access
-  end
-
-  private
-
-  def warden_scope(resource)
-    resource.class.name.underscore.to_sym
-  end
-end
-
-RSpec.configure do |config|
-  config.include RequestSpecHelper, type: :request
-  config.before(:each, type: :request) { host! "my_app.test" }
-end
-```
-
-## 8. Tweaking Rails configs
+## 6. Tweaking Rails configs
 
 Now let's remove some bloat that Rails generators create for us, and add Gzip.
 
@@ -209,3 +246,17 @@ end
 # Gzip all responses
 config.middleware.use Rack::Deflater
 ```
+
+I’m a fan of Rails credentials, even with the [12 plumbus](https://12factor.net/), but I do not like the idea of committing it.
+So let's ignore all `.key` and `.yml.enc` files withing `config/`:
+
+```sh
+# Ignore master key for decrypting credentials and more.
+/config/**/*.key
+
+#Ignore any credentials inside config folder
+/config/**/*.yml.enc
+```
+
+> Commit to not commit!
+
