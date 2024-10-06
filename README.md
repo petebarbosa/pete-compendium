@@ -13,7 +13,7 @@ Also, feel free to give me some tips or correct some information that I might be
     <li>
       <a href="#ruby-on-rails">Ruby on Rails</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#rail-default-configuration">Rails 7 default configuration</a></li>
       </ul>
     </li>
   </ol>
@@ -23,4 +23,4 @@ Also, feel free to give me some tips or correct some information that I might be
 
 ### Ruby on Rails
 
-- [Rails default configuration](https://github.com/PeterDev-89/peter-docs-collection/blob/main/rail_default_config.md) - A copy and paste guide to start and setup a new Rails configuration
+- [Rails 7 default configuration](https://github.com/PeterDev-89/peter-docs-collection/blob/main/rail_default_config.md) - A copy and paste guide to start and setup a new Rails configuration
