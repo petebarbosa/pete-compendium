@@ -18,6 +18,8 @@ sudo apt install -y curl git imagemagick jq unzip vim zsh tree
 
 These commands will ask for your password: type it in.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ### GitHub CLI installation
 
 Let's now install [GitHub official CLI](https://cli.github.com). It's a software used to interact with your GitHub account via the command line.
@@ -47,6 +49,8 @@ To check that `gh` has been successfully installed on your machine, you can run:
 gh --version
 ```
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Oh-my-zsh
 
 Let's install the `zsh` plugin [Oh My Zsh](https://ohmyz.sh/).
@@ -56,6 +60,8 @@ In a terminal execute the following command:
 ```bash
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## GitHub CLI
 
@@ -97,6 +103,8 @@ To check that you are properly connected, type:
 gh auth status
 ```
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## git installer
 
 Run the `git` installer:
@@ -112,6 +120,8 @@ Please now **reset** your terminal by running:
 ```bash
 exec zsh
 ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## rbenv
 
@@ -143,6 +153,8 @@ git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 ```bash
 exec zsh
 ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Ruby
 
@@ -181,6 +193,8 @@ Then run:
 ruby -v
 ```
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Installing some gems
 
 
@@ -193,11 +207,12 @@ gem update bundler
 In your terminal, copy-paste the following command:
 
 ```bash
-gem install colored faker http pry-byebug rake rails rest-client rspec rubocop-performance sqlite activerecord
+gem install colored colorls faker http pry-byebug rake rails rest-client rspec rubocop-performance sqlite activerecord
 ```
 
 :warning: **NEVER** install a gem with `sudo gem install`! Even if you stumble upon a Stackoverflow answer (or the terminal) telling you to do so.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Node.js
 
@@ -237,6 +252,8 @@ After installing, clear cache:
 nvm cache clear
 ```
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## yarn
 
 [`yarn`](https://yarnpkg.com/) is a package manager to install JavaScript libraries. Let's install it:
@@ -260,6 +277,8 @@ Then run the following command:
 yarn -v
 ```
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## SQLite
 
 In a few weeks, we'll talk about databases and SQL. [SQLite](https://sqlite.org/index.html) is a database engine used to execute SQL queries on single-file databases. Let's install it:
@@ -276,6 +295,8 @@ Then run the following command:
 sqlite3 -version
 ```
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## PostgreSQL
 
 Sometimes, SQLite is not enough and we will need a more advanced tool called [PostgreSQL](https://www.postgresql.org/), an open-source robust and production-ready database system.
@@ -291,6 +312,8 @@ sudo apt install -y postgresql postgresql-contrib libpq-dev build-essential
 ```bash
 sudo -u postgres psql --command "CREATE ROLE \"`whoami`\" LOGIN createdb superuser;"
 ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Ubuntu settings
 
