@@ -1,4 +1,4 @@
-# Starting a new Rails 7 application
+# Rails 7 default configuration
 
 This is my guide on how to start a Rails application the way I like and usually use.
 
