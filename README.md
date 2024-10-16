@@ -12,10 +12,6 @@ Also, feel free to give me some tips or correct some information that I might be
   <ol>
     <li>
       <a href="#ruby-on-rails">Ruby on Rails</a>
-      <ul>
-        <li><a href="#debian-environment-setup-for-rails-development">Debian environment setup for Rails development</a></li>
-        <li><a href="#rail-default-configuration">Rails 7 default configuration</a></li>
-      </ul>
     </li>
   </ol>
 </details>
