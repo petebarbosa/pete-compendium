@@ -4,7 +4,7 @@
 
 </br>
 <div align="center">
-  <img src=https://github.com/petebarbosa/peter-docs-collection/blob/main/assets/job-interview.png/>
+  <img width="200" src=https://github.com/petebarbosa/peter-docs-collection/blob/main/assets/job-interview.png/>
 </div>
 </br>
 
@@ -58,15 +58,15 @@ This is the most important part because it's where you'll present the bulk of th
 
 ### Example
 
-Thank you for speaking with me! I’m excited to learn that `company_name` is hiring.
-
-Well, I have been a `field_of_work` for `X` years. I’m from `LOCATION`. Since I have long-standing experience with `activity_1`, I have worked with `activity_2` since `DATE`.
-
-After studying `subject`, I had the opportunity to join the `team_name` team at `company_name`. There, I worked with `activity_3`, coordinated `activity_4`, based on `knowledge_for_the_position`.
-
-Currently, I am a `job_title` at `company_name`, where I work with `activity_1`, `activity_2`, among other things...
-
-That brings me to today. I have been seeking a new opportunity to work in an industry like yours, and that's when I found this position.
+> Thank you for speaking with me! I’m excited to learn that `company_name` is hiring.
+> 
+> Well, I have been a `field_of_work` for `X` years. I’m from `LOCATION`. Since I have long-standing experience with `activity_1`, I have worked with `activity_2` since `DATE`.
+> 
+> After studying `subject`, I had the opportunity to join the `team_name` team at `company_name`. There, I worked with `activity_3`, coordinated `activity_4`, based on `knowledge_for_the_position`.
+> 
+> Currently, I am a `job_title` at `company_name`, where I work with `activity_1`, `activity_2`, among other things...
+> 
+> That brings me to today. I have been seeking a new opportunity to work in an industry like yours, and that's when I found this position.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
