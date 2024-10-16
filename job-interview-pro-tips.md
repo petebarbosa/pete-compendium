@@ -15,11 +15,11 @@ This is a stack of informations that I've gathered throughout my experiences wit
   <ol>
     <li><a href="#talk-about-yourself">Talk about yourself</a></li>
     <li><a href="#questions-to-ask">Questions to ask</a></li>
-  </ol>
+    <li><a href="#hints">Hints</a></li>
+ </ol>
 </details>
 
 <a id="talk-about-yourself"></a>
-
 ## Talk about yourself
 
 Follow the guidelines below to craft a convincing and concise response to this question, which many find quite difficult.
@@ -59,19 +59,18 @@ This is the most important part because it's where you'll present the bulk of th
 ### Example
 
 > Thank you for speaking with me! I’m excited to learn that `company_name` is hiring.
-> 
+>
 > Well, I have been a `field_of_work` for `X` years. I’m from `LOCATION`. Since I have long-standing experience with `activity_1`, I have worked with `activity_2` since `DATE`.
-> 
+>
 > After studying `subject`, I had the opportunity to join the `team_name` team at `company_name`. There, I worked with `activity_3`, coordinated `activity_4`, based on `knowledge_for_the_position`.
-> 
+>
 > Currently, I am a `job_title` at `company_name`, where I work with `activity_1`, `activity_2`, among other things...
-> 
+>
 > That brings me to today. I have been seeking a new opportunity to work in an industry like yours, and that's when I found this position.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <a id="#questions-to-ask"></a>
-
 ## Questions to ask
 
 ### 1. Ask about a moment when an employee impressed the manager:
@@ -111,3 +110,46 @@ With this question, we find out the extent of the challenge we’ll be facing.
 This is a good question to see if what the interviewer highlights is also what you're looking for in a job. It’s also a chance to evaluate if the company’s image on LinkedIn or in the job ad holds true.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Behavioral questions
+
+Commonly asked behavioral interview questions
+
+### 1. Tell me about yourself.
+### 1.1. Tell me about yourself, but not what you work, like hobbies and life style
+
+### 2. Tell me about a time when you were successful in selling an idea to a group of people that did not initially support your view/idea.
+
+### 3. Give me an example of something particularly innovative that you have done that made a difference in the workplace.
+
+### 4. Tell me about a time when you took significant risk and it did not produce the outcome you had hoped for. How did you recover? What would you have done differently?
+5. Describe a time you were given an assignment for which you did not have many of the skills or knowledge to be successful. How did you handle it?
+6. Give me an example of a challenging project where you had a significant analytical role.
+7. Tell me about a specific time you had to lead, supervise, or manage a group of people. What approach did you take and what was the outcome?
+8. Give me an example of how you have prioritized conflicting projects or multiple deadlines.
+9. Tell me about a time you attempted something and failed.
+10. Describe a time when you were faced with a stressful situation and how you dealt with it.
+11. Tell me about a time that you had to teach and develop others in order to get a job done.
+12. Talk about a time when you had conflict within a team.  How did you resolve it?
+13. Give me an example of a time when you were working with someone, and the person failed to meet your expectations. How did you handle it?
+14. Tell me about a specific time you had to make a key decision. What was the outcome?
+15. What are your greatest strengths? Biggest weaknesses?
+16. What unique experiences and/or skills do you have that would be transferable to any organization? 
+17. What are you most proud of?
+
+## Questions Specific to Each Company or Position
+
+1. Why are you interested in this position?
+2. Why are you interested in our company?
+3. What do you know about our company/industry?
+4. Why Consulting?
+5. What experience and skills do you have that would be transferable to this position?
+
+<a id="#hints"></a>
+## Hints
+
+- Identify yourself with some points from the position. It's not just "Oh, this is a developer position, I like writing code". Give it a thought, prepare to present it, like:
+
+> Description: This is position is for a startup so we're always running against the clock.
+>
+> "I noticed that you're looking for someone that is adaptable and that knows how to work under pressure, because it's a fast growing startup. I'm well versed in this type of environment. I can work really with a tight schedule."
