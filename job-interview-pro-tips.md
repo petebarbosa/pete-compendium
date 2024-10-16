@@ -4,7 +4,7 @@
 
 </br>
 <div align="center">
-  <img width="200" src=https://github.com/petebarbosa/peter-docs-collection/blob/main/assets/job-interview.png/>
+  <img width="400" src=https://github.com/petebarbosa/peter-docs-collection/blob/main/assets/job-interview.png/>
 </div>
 </br>
 
