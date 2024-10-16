@@ -13,12 +13,12 @@ This is a stack of informations that I've gathered throughout my experiences wit
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li>
-      <a href="#talk-about-yourself">Talk about yourself</a>
-      <a href="#question-to-ask">Questions to ask</a>
-    </li>
+    <li><a href="#talk-about-yourself">Talk about yourself</a></li>
+    <li><a href="#questions-to-ask">Questions to ask</a></li>
   </ol>
 </details>
+
+<a id="talk-about-yourself"></a>
 
 ## Talk about yourself
 
@@ -69,6 +69,8 @@ This is the most important part because it's where you'll present the bulk of th
 > That brings me to today. I have been seeking a new opportunity to work in an industry like yours, and that's when I found this position.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<a id="#questions-to-ask"></a>
 
 ## Questions to ask
 
