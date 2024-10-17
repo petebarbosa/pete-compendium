@@ -14,7 +14,9 @@ This is a stack of informations that I've gathered throughout my experiences wit
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#talk-about-yourself">Talk about yourself</a></li>
-    <li><a href="#questions-to-ask">Questions to ask</a></li>
+    <li><a href="#questions-to-ask">Questions to ask the interviewer</a></li>
+    <li><a href="#behavioral-questions">Behavioral questions</a></li>
+    <li><a href="#specific-questions">Questions specific to the role</a></li>
     <li><a href="#hints">Hints</a></li>
  </ol>
 </details>
@@ -29,6 +31,8 @@ Follow the guidelines below to craft a convincing and concise response to this q
 Take the job description and highlight or note down all the elements, tasks, and skills required for the position that you have experience in.
 
 Try to highlight at least three things you've experienced, either in previous jobs, courses, or certifications. This way, we can establish a chronological order of our learning, which we'll use to structure our narrative.
+
+I've made a ChatGPT guide that can help out with this topic, [here it goes]()
 
 ### 2. Where did I come from?
 
@@ -70,7 +74,7 @@ This is the most important part because it's where you'll present the bulk of th
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<a id="#questions-to-ask"></a>
+<a id="questions-to-ask"></a>
 ## Questions to ask
 
 ### 1. Ask about a moment when an employee impressed the manager:
@@ -111,18 +115,15 @@ This is a good question to see if what the interviewer highlights is also what y
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<a id="behavioral-questions"></a>
 ## Behavioral questions
 
 Commonly asked behavioral interview questions
 
-### 1. Tell me about yourself.
-### 1.1. Tell me about yourself, but not what you work, like hobbies and life style
-
-### 2. Tell me about a time when you were successful in selling an idea to a group of people that did not initially support your view/idea.
-
-### 3. Give me an example of something particularly innovative that you have done that made a difference in the workplace.
-
-### 4. Tell me about a time when you took significant risk and it did not produce the outcome you had hoped for. How did you recover? What would you have done differently?
+1. Tell me about yourself.
+2. Tell me about a time when you were successful in selling an idea to a group of people that did not initially support your view/idea.
+3. Give me an example of something particularly innovative that you have done that made a difference in the workplace.
+4. Tell me about a time when you took significant risk and it did not produce the outcome you had hoped for. How did you recover? What would you have done differently?
 5. Describe a time you were given an assignment for which you did not have many of the skills or knowledge to be successful. How did you handle it?
 6. Give me an example of a challenging project where you had a significant analytical role.
 7. Tell me about a specific time you had to lead, supervise, or manage a group of people. What approach did you take and what was the outcome?
@@ -137,13 +138,18 @@ Commonly asked behavioral interview questions
 16. What unique experiences and/or skills do you have that would be transferable to any organization? 
 17. What are you most proud of?
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<a id="specific-questions"></a>
 ## Questions Specific to Each Company or Position
 
 1. Why are you interested in this position?
 2. Why are you interested in our company?
 3. What do you know about our company/industry?
-4. Why Consulting?
+4. Why `job area`?
 5. What experience and skills do you have that would be transferable to this position?
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <a id="#hints"></a>
 ## Hints
@@ -153,3 +159,6 @@ Commonly asked behavioral interview questions
 > Description: This is position is for a startup so we're always running against the clock.
 >
 > "I noticed that you're looking for someone that is adaptable and that knows how to work under pressure, because it's a fast growing startup. I'm well versed in this type of environment. I can work really with a tight schedule."
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
