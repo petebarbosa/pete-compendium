@@ -141,6 +141,8 @@ rails generate devise:install
 
 Devise will mix some letters into some steps you should do, just follow it.
 
+After following what's written in Devices terminal, run:
+
 ```sh 
 rails generate devise User
 ```
