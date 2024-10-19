@@ -1,3 +1,5 @@
+<a id="readme-top"></a>
+
 # Rails 7 default configuration
 
 This is my guide on how to start a Rails application the way I like and usually use.
@@ -13,6 +15,8 @@ rails new my_app --database=postgresql --skip-test --skip-jbuider --css tailwind
 ```
 
 > COMMIT
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 2. Setting up RSpec
 
@@ -110,7 +114,36 @@ end
 
 > COMMIT
 
-## 3. Setting up Devise (Optional)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 3. (Optional) Factory Bot
+
+Ensure these instructions are up to date, reference the [documentation](https://github.com/thoughtbot/factory_bot_rails).
+
+Add to `Gemfile`, inside `:development, :test`:
+
+```ruby
+# Use factory_bot_rails as a fixtures replacement with a straightforward definition syntax. [https://github.com/thoughtbot/factory_bot_rails]
+gem 'factory_bot_rails'
+```
+
+Run on terminal:
+
+```sh
+bundle install
+```
+
+Now, let's configure our test suite to include factory_bot_rails methods. Add to `spec/rails_helper.rb`
+
+```ruby
+RSpec.configure do |config|
+  config.include FactoryBot::Syntax::Methods
+end
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 4. (Optional) Setting up Devise
 
 Ensure these instructions are up to date, reference the [documentation](https://github.com/heartcombo/devise).
 
@@ -161,7 +194,7 @@ t.string :first_name,       null: false, default: ""
 t.string :last_name,        null: false, default: ""
 ```
 
-### 3.1 Tweaking some Devise configs
+### 4.1 Tweaking some Devise configs
 
 Here are some configurations that I like to change. They are all at `config/initializers/devise.rb`:
 
@@ -173,24 +206,26 @@ config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.c
 # config.remember_for = 2.weeks
 
 # Uncomment these lines to avoid people trying to brute force an account
-# config.lock_strategy = :failed_attempts
+config.lock_strategy = :failed_attempts
 
-# config.unlock_keys = [:email]
+config.unlock_keys = [:email]
 
-# config.unlock_strategy = :both
+config.unlock_strategy = :both
 
-# config.maximum_attempts = 20
+config.maximum_attempts = 20
 
-# config.unlock_in = 1.hour
+config.unlock_in = 1.hour
 
-# config.last_attempt_warning = true
+config.last_attempt_warning = true
 ```
 
 If you want some locales for devise, here are some [devise locales](https://github.com/heartcombo/devise/wiki/I18n). Just create a `config/devise.your_language.yml` it.
 
 > COMMIT
 
-## 4. Setting up Letter Opener (Optional)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 5. (Optional) Setting up Letter Opener
 
 A simple gem to check sent e-mail from your application. [Documentation](https://github.com/fgrehm/letter_opener_web), why not?
 
@@ -216,7 +251,9 @@ config.action_mailer.perform_deliveries = true
 ```
 > Guess what?
 
-## 5. Setting up Pundit (Optional)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 6. (Optional) Setting up Pundit
 
 Pundit provides us a set of helpers which guide you in leveraging User/Admin policies. As always, [Docs](https://github.com/varvet/pundit).
 
@@ -235,7 +272,9 @@ rails g pundit:install
 
 > Come on. You know what you should be doing here.
 
-## 6. Tweaking Rails configs
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 7. Tweaking Rails configs
 
 Now let's remove some bloat that Rails generators create for us, and add Gzip.
 
