@@ -38,6 +38,12 @@ bundle binstubs rspec-core
 
 ### 2.1. Tweaking RSpec
 
+First we'll add into `.rspec` the line bellow, because we're not masochists:
+
+```sh
+--format documentation
+```
+
 Now we just change some configurations in `spec/rails_helper.rb`
 
 Uncomment the line bellow. This tells Rspec to look into specs support directory and load all those files, so it let us create helpers and things like that
