@@ -6,9 +6,9 @@ Remember to add and commit every step!
 
 ## 1. Generate the project
 
-If needed, check the Rails command line [documentation](https://guides.rubyonrails.org/command_line.html). 
+If needed, check the Rails command line [documentation](https://guides.rubyonrails.org/command_line.html).
 
-```sh 
+```sh
 rails new my_app --database=postgresql --skip-test --skip-jbuider --css tailwind 
 ```
 
@@ -16,7 +16,7 @@ rails new my_app --database=postgresql --skip-test --skip-jbuider --css tailwind
 
 ## 2. Setting up RSpec
 
-Instead of using default Rails Minitest, we're going with the best of the best (or because it's the one I learned in...)!
+Instead of using default Rails Minitest (which we removed with `--skip-test`), we're going with the best of the best (or because it's the one I learned in...)!
 
 [Documentation](https://github.com/rspec/rspec-rails/) you know, just in case.
 
@@ -33,6 +33,7 @@ Next, in your project directory:
 bundle install
 rails generate rspec:install
 bundle binstubs rspec-core
+# Now we can run our tests with bin/rspec
 ```
 
 ### 2.1. Tweaking RSpec
