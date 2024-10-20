@@ -11,7 +11,13 @@ Remember to add and commit every step!
 If needed, check the Rails command line [documentation](https://guides.rubyonrails.org/command_line.html).
 
 ```sh
-rails new my_app --database=postgresql --skip-test --skip-jbuider --css tailwind 
+rails new my-app-name --database=postgresql --skip-test --skip-jbuider --css tailwind 
+```
+
+If you're going the API way:
+
+```sh
+rails new my-app-name --database=postgresql --skip-test --api
 ```
 
 > COMMIT
@@ -56,7 +62,7 @@ Uncomment the line bellow. This tells Rspec to look into specs support directory
 Rails.root.glob('spec/support/**/*.rb').sort_by(&:to_s).each { |f| require f }
 ```
 
-The add these to the configuration block:
+The add these to the configuration block, `RSpec.configure do |config|`:
 
 ```ruby
 config.global_fixtuers = :all
@@ -202,10 +208,9 @@ Here are some configurations that I like to change. They are all at `config/init
 # If you already have the domain, just it it already man...
 config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
-# Uncomment the line bellow. No one deserves to keep loging again and again
-# config.remember_for = 2.weeks
+# Uncomment the lines bellow:
+config.remember_for = 2.weeks
 
-# Uncomment these lines to avoid people trying to brute force an account
 config.lock_strategy = :failed_attempts
 
 config.unlock_keys = [:email]
