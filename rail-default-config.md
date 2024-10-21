@@ -179,6 +179,16 @@ def configure_permitted_parameters
 end
 ```
 
+If you want/need to skip authentication, just add to the specific controller:
+
+```ruby
+# For the role controller:
+skip_before_action :authenticate_user!
+
+# For a specific method of a controller:
+skip_before_action :authenticate_user!., only [:method]
+```
+
 Next, we'll install Devise and generate a `User` model:
 
 ```sh 
