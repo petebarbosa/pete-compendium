@@ -1,8 +1,9 @@
 <a id="readme-top"></a>
 
-# Clean Debian development environment
+# Clean Ubuntu/Debian development environment
 
 This is how I usually start a new environment for development. This setup was inspired by the one Le Wagon provides all it's students. I removed some parts, since it's used in classes, but won't be used in real life. And if you want an amazing bootcamp, please do check out [Le Wagon](https://www.lewagon.com/).
+
 
 ## Zsh & Git
 

@@ -20,7 +20,7 @@ This is a stack of informations that I've gathered throughout my experiences wit
     <li><a href="#hints">Hints</a></li>
  </ol>
 </details>
-
+ 
 <a id="talk-about-yourself"></a>
 ## Talk about yourself
 

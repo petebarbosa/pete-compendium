@@ -1,8 +1,12 @@
 <a id="readme-top"></a>
 
+<div align="center">
+
 # My server default configuration
 
-The intention of this guide is to set up a brand new installation of a Debian based servers. With this guide we'll be able:
+This guide's intention is to set up a brand new installation of a Debian based servers. With this guide we'll be able:
+
+</div>
 
 - Connect locally via SSH
 - Connect remotely via SSH
@@ -10,6 +14,8 @@ The intention of this guide is to set up a brand new installation of a Debian ba
 - Set security measures for all the steps above
 
 P.S.: In this guide I'm considering you're using two machines, an `ubuntu_server` and an `ubuntu_client`.
+
+P.P.S: If you're using a GUI installation of Ubuntu (the non-server installation), consider using [omakub](https://omakub.org/). It's going to install everything your environment. You'll just need to make a few tweaks.
 
 ## Step 1: Install SSH on the `ubuntu_server`
 
@@ -145,4 +151,3 @@ Docker engine comes bundled with Docker Desktop (and let's be sincere here, it's
     sudo docker run hello-world
     ```
 
-4. Now download the latest [DEB package](https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-linux-amd64) and install it.
