@@ -17,9 +17,13 @@ Also, feel free to give me some tips or correct some information that I might be
         </ul>
       <a href="#ruby-on-rails">Ruby on Rails</a>
         <ul>
-          <a href="">Rails 7 default configuration</a>
+          <a href="#rails-seven-default">Rails 7 default configuration</a>
         </ul>
-      <a href="#interviews">interviews</a>
+      <a href="#misc">Miscellaneous</a>
+        <ul>
+          <a href="#interviews">Job interview pro tips</a>
+          <a href="#gpt-interview">GPT interview prompting helper</a>
+        </ul>
     </li>
   </ol>
 </details>
@@ -36,8 +40,13 @@ Also, feel free to give me some tips or correct some information that I might be
 <div id="#ruby-on-rails"></div>
 
 - [Rails 7 default configuration](https://github.com/PeterDev-89/peter-docs-collection/blob/main/rail-default-config.md) - A copy and paste guide to start and setup a new Rails configuration
+<div id="#rails-seven-default"></div>
 
 ### Miscellaneous
+<div id="#misc"></div>
 
-- [Job interviews pro tips](https://github.com/petebarbosa/peter-docs-collection/blob/main/job-interview-pro-tips.md)
+- [Job interviews pro tips](https://github.com/petebarbosa/peter-docs-collection/blob/main/job-interview-pro-tips.md) - Commonly asked question in interviews and some helping hand for crafting your resume
 <div id="#interviews"></div>
+
+- [GPT interview prompting helper](gpt-interview-guide) - A small tutorial for GPT resume generation. Only use it as a base. Write it yourself
+<div id="#gpt-interview"></div>
