@@ -15,10 +15,20 @@ Also, feel free to give me some tips or correct some information that I might be
         <ul>
           <a href="#ubuntu-local">Penguin environment setup for Rails development</a>
         </ul>
+    </li>
+    <li>
       <a href="#ruby-on-rails">Ruby on Rails</a>
         <ul>
           <a href="#rails-seven-default">Rails 7 default configuration</a>
         </ul>
+    </li>
+    <li>
+      <a href="#ruby-on-rails">Ruby on Rails</a>
+        <ul>
+          <a href="#rails-seven-default">Rails 7 default configuration</a>
+        </ul>
+    </li>
+    <li>
       <a href="#misc">Miscellaneous</a>
         <ul>
           <a href="#interviews">Job interview pro tips</a>
