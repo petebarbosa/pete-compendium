@@ -35,13 +35,13 @@ Also, feel free to give me some tips or correct some information that I might be
 ### Ubuntu/Debian
 <div id="#ubuntu-debian"></div>
 
-- [Ubuntu/Debian environment setup for Rails development](https://github.com/PeterDev-89/pete-compendium/blob/main/debian-rails-develop-environment.md) - Gosh, I like to format my machines
+- [Ubuntu/Debian environment setup for Rails development](https://github.com/petebarbosa/pete-compendium/blob/main/debian-rails-develop-environment.md) - Gosh, I like to format my machines
 <div id="#ubuntu-local"></div>
 
 ### Ruby on Rails
 <div id="#ruby-on-rails"></div>
 
-- [Rails 7 default configuration](https://github.com/PeterDev-89/pete-compendium/blob/main/rail-default-config.md) - A copy and paste guide to start and setup a new Rails configuration
+- [Rails 7 default configuration](https://github.com/petebarbosa/pete-compendium/blob/main/rail-default-config.md) - A copy and paste guide to start and setup a new Rails configuration
 <div id="#rails-seven-default"></div>
 
 ### Miscellaneous
