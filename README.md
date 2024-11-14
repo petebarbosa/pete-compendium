@@ -47,7 +47,7 @@ Also, feel free to give me some tips or correct some information that I might be
 ### Miscellaneous
 <div id="#misc"></div>
 
-- [Job interviews pro tips](https://github.com/petebarbosa/pete-compendium/blob/main/gpt-interview-guide.md) - Commonly asked question in interviews and some helping hand for crafting your resume
+- [Job interviews pro tips](https://github.com/petebarbosa/pete-compendium/blob/main/job-interview-pro-tips.md) - Commonly asked question in interviews and some helping hand for crafting your resume
 <div id="#interviews"></div>
 
 - [GPT interview prompting helper](https://github.com/petebarbosa/pete-compendium/blob/main/gpt-interview-guide.md) - A small tutorial for GPT resume generation. Only use it as a base. Write it yourself
