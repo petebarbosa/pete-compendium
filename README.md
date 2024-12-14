@@ -47,7 +47,7 @@ Also, feel free to give me some tips or correct some information that I might be
 - [Rails 7 default configuration](https://github.com/petebarbosa/pete-compendium/blob/main/rail-default-config.md) - A copy and paste guide to start and setup a new Rails configuration
 <div id="#rails-seven-default"></div>
 
-- [Rails interview questions](https://github.com/petebarbosa/pete-compendium/blob/main/rail-interview-questions.md) - A few common rails related questions
+- [Rails interview questions](https://github.com/petebarbosa/pete-compendium/blob/main/rails-interview-questions.md) - A few common rails related questions
 <div id="#rails-interview-questions"></div>
 
 ### Miscellaneous
