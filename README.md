@@ -21,6 +21,9 @@ Also, feel free to give me some tips or correct some information that I might be
         <ul>
           <a href="#rails-seven-default">Rails 7 default configuration</a>
         </ul>
+        <ul>
+          <a href="#rails-interview-questions">Rails interview questions</a>
+        </ul>
     </li>
     <li>
       <a href="#misc">Miscellaneous</a>
@@ -43,6 +46,9 @@ Also, feel free to give me some tips or correct some information that I might be
 
 - [Rails 7 default configuration](https://github.com/petebarbosa/pete-compendium/blob/main/rail-default-config.md) - A copy and paste guide to start and setup a new Rails configuration
 <div id="#rails-seven-default"></div>
+
+- [Rails interview questions](https://github.com/petebarbosa/pete-compendium/blob/main/rail-interview-questions.md) - A few common rails related questions
+<div id="#rails-interview-questions"></div>
 
 ### Miscellaneous
 <div id="#misc"></div>
